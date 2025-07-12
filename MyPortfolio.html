@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahaeddine Zarrouk - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #3498db;
+            border-radius: 2px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+        .skill-category {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .skill-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+        .skill-item svg {
+            margin-right: 0.75rem;
+            min-width: 24px; /* Ensure icon doesn't shrink */
+        }
+        .experience-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .experience-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .footer-link {
+            transition: color 0.3s ease;
+        }
+        .footer-link:hover {
+            color: #3498db;
+        }
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #3498db;
+            box-shadow: 0 0 0 8px rgba(52, 152, 219, 0.3);
+            margin-bottom: 1.5rem;
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            margin-bottom: 3rem;
+        }
+        .header-bg h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .header-bg p {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        @media (max-width: 768px) {
+            .header-bg h1 {
+                font-size: 2.5rem;
+            }
+            .header-bg p {
+                font-size: 1.2rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section d'introduction/en-tête -->
+    <header class="header-bg">
+        <div class="container flex flex-col items-center">
+            <img src="https://placehold.co/180x180/3498db/ffffff?text=BZ" alt="Image de profil de Bahaeddine Zarrouk" class="profile-image">
+            <h1 class="text-white">Bahaeddine Zarrouk</h1>
+            <p class="text-white">Technicien Développeur en Informatique</p>
+            <div class="mt-6 flex space-x-4">
+                <a href="https://www.linkedin.com/in/zarrouk-bahaeddine-4389b827b/" target="_blank" class="text-white hover:text-gray-200 transition-colors">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="mailto:Bahaeddinezarrouk@gmail.com" class="text-white hover:text-gray-200 transition-colors">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 12.713l-11.75 6.287c-.12-.08-.25-.13-.38-.13h23.5c-.13 0-.26.05-.38.13l-11.75-6.287zm0-1.426l-11.75-6.287c.12-.08.25-.13.38-.13h23.5c-.13 0-.26.05-.38.13l-11.75 6.287z"/>
+                    </svg>
+                </a>
+                <a href="tel:+21658747059" class="text-white hover:text-gray-200 transition-colors">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 22.062c-1.767 0-3.53-.322-5.18-.962-1.65-.64-3.15-1.57-4.45-2.87-1.3-1.3-2.23-2.8-2.87-4.45-.64-1.65-.962-3.413-.962-5.18 0-1.104.896-2 2-2h3.5c.552 0 1 .448 1 1v3.5c0 .276-.112.53-.305.724l-1.5 1.5c.883 1.517 2.383 3.017 3.883 3.883l1.5-1.5c.194-.194.448-.305.724-.305h3.5c1.104 0 2 .896 2 2v3.5c0 1.104-.896 2-2 2z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Section À Propos -->
+        <section id="about" class="card">
+            <h2 class="section-title">À Propos</h2>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Technicien-développeur passionné, spécialisé en support informatique, réseaux Cisco et développement web/mobile.
+                Certifié Python Tosa (Niveau Expert - 939/1000) et titulaire d'une licence en informatique. Polyvalent avec des
+                compétences allant de la maintenance matérielle au développement full-stack (PHP/Laravel, JavaScript).
+                Rigoureux et autonome, je m'adapte rapidement aux besoins techniques.
+            </p>
+        </section>
+
+        <!-- Section Compétences Techniques -->
+        <section id="skills" class="card">
+            <h2 class="section-title">Compétences Techniques</h2>
+
+            <div class="skill-category text-green-700">🟢 Expert dans :</div>
+            <ul class="list-none p-0 m-0 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <li class="skill-item">
+                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Le développement en Python (scripts, automatisation, backend)</span>
+                </li>
+                <li class="skill-item">
+                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Le développement web avec PHP/Laravel, JavaScript, HTML/CSS, et WordPress</span>
+                </li>
+                <li class="skill-item">
+                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>L’installation de systèmes Windows/Linux, le montage de PC et la configuration BIOS</span>
+                </li>
+                <li class="skill-item">
+                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>La configuration réseau via Cisco Packet Tracer (CCNA, Configuration IP)</span>
+                </li>
+                <li class="skill-item">
+                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>L’utilisation avancée de la suite Microsoft Office (Excel, Word, PowerPoint)</span>
+                </li>
+                <li class="skill-item">
+                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>L’analyse et la compréhension des cryptomonnaies : définitions, fonctionnement, points forts (décentralisation, rapidité), points faibles (volatilité, sécurité, réglementation)</span>
+                </li>
+            </ul>
+
+            <div class="skill-category text-yellow-700">🟡 À l’aise avec :</div>
+            <ul class="list-none p-0 m-0 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <li class="skill-item">
+                    <svg class="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>La conception UI/UX avec Figma</span>
+                </li>
+                <li class="skill-item">
+                    <svg class="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>L’usage de Blender et Photoshop pour des tâches graphiques simples</span>
+                </li>
+                <li class="skill-item">
+                    <svg class="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>La réparation de téléphones mobiles GSM et le développement d’applications mobiles de base</span>
+                </li>
+            </ul>
+
+            <div class="skill-category text-orange-700">🟠 En cours d’apprentissage :</div>
+            <ul class="list-none p-0 m-0 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <li class="skill-item">
+                    <svg class="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>L’optimisation avancée des performances front-end</span>
+                </li>
+                <li class="skill-item">
+                    <svg class="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Les méthodologies de développement Agile et le travail collaboratif en équipe</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section Formations -->
+        <section id="education" class="card">
+            <h2 class="section-title">Formations</h2>
+            <div class="space-y-6">
+                <div class="experience-item">
+                    <h3 class="text-xl font-semibold text-gray-800">LICENCE EN INFORMATIQUE (BAC +3)</h3>
+                    <p class="text-gray-600">Collège de Paris / Amilcar University - Campus Tunis</p>
+                    <p class="text-gray-500 text-sm">2024-2025</p>
+                </div>
+                <div class="experience-item">
+                    <h3 class="text-xl font-semibold text-gray-800">BREVET DE TECHNICIEN SUPÉRIEUR</h3>
+                    <p class="text-gray-600">Istam - Tunisie</p>
+                    <p class="text-gray-500 text-sm">2021-2023</p>
+                </div>
+                <div class="experience-item">
+                    <h3 class="text-xl font-semibold text-gray-800">BREVET DE TECHNICIEN PROFESSIONNEL</h3>
+                    <p class="text-gray-600">Istam - Tunisie</p>
+                    <p class="text-gray-500 text-sm">2019-2021</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Expériences Professionnelles -->
+        <section id="experience" class="card">
+            <h2 class="section-title">Expériences Professionnelles</h2>
+            <div class="space-y-6">
+                <div class="experience-item">
+                    <h3 class="text-xl font-semibold text-gray-800">STAGIAIRE DÉVELOPPEUR WEB - Amen Bank, Tunisie</h3>
+                    <p class="text-gray-500 text-sm">2022 - 2 mois</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                        <li>Développement et maintenance d'applications web</li>
+                        <li>Collaboration avec l'équipe IT sur des solutions internes</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3 class="text-xl font-semibold text-gray-800">STAGIAIRE DÉVELOPPEUR WEB - Tunisair</h3>
+                    <p class="text-gray-500 text-sm">2024 - 2 mois</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                        <li>Collaboration avec les équipes techniques sur les tâches de debuggage et de maintenance</li>
+                        <li>Optimisation des processus métiers par des solutions web automatisées</li>
+                        <li>Développement d'interfaces utilisateur (HTML/CSS/JavaScript)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Certifications -->
+        <section id="certifications" class="card">
+            <h2 class="section-title">Certifications</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>PYTHON 3 (EXPERT 939/1000) | TOSA</li>
+                <li>FRONT-END DEVELOPMENT (META) | COURSERA</li>
+                <li>CCNA1 & CCNA2 (CISCO) | ISTAM</li>
+                <li>JAVASCRIPT BASICS FOR BEGINNERS | UDEMY</li>
+                <li>ISTQB FOUNDATION LEVEL | GASQ</li>
+                <li>UI/UX DESIGN (FIGMA) | ISTAM</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Section Pied de page -->
+    <footer class="bg-gray-800 text-white py-8 mt-10">
+        <div class="container text-center">
+            <p class="mb-4">&copy; 2025 Bahaeddine Zarrouk. Tous droits réservés.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/zarrouk-bahaeddine-4389b827b/" target="_blank" class="footer-link">
+                    LinkedIn
+                </a>
+                <a href="mailto:Bahaeddinezarrouk@gmail.com" class="footer-link">
+                    Email
+                </a>
+                <a href="tel:+21658747059" class="footer-link">
+                    Téléphone
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
